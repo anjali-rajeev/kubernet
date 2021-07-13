@@ -1,0 +1,7 @@
+FROM java:8
+
+EXPOSE 8080
+
+ADD target/kubernet-demo.jar
+
+ENTRYPOINT ["java",".jar","kubernet-demo.jar"]

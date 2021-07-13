@@ -1,7 +1,4 @@
 FROM java:8
-
 EXPOSE 8080
-
-ADD target/kubernet-demo.jar
-
-ENTRYPOINT ["java",".jar","kubernet-demo.jar"]
+COPY target/kubernet-demo.jar kubernet-demo.jar
+CMD java -jar kubernet-demo.jar
